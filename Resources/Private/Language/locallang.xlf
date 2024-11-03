@@ -15,6 +15,9 @@
 			<trans-unit id="palette.wstestimonials" xml:space="preserve">
 				<source>Testimonials</source>
 			</trans-unit>
+			<trans-unit id="items" xml:space="preserve">
+				<source>Elements</source>
+			</trans-unit>
 
 		</body>
 	</file>

@@ -70,11 +70,7 @@ $GLOBALS['TCA']['tt_content']['palettes'] = array_replace_recursive(
         'ws_testimonials' => [
             'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:palette.wstestimonials',
             'showitem' => '
-                tx_wsslider_preset;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:preset,--linebreak--,
-                tx_wsslider_renderer;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:renderer,
-                tx_wsslider_layout;LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.layout,
-                --linebreak--,
-                tx_wsslider_items;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items,
+                tx_wstestimonials_items;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items,
              ',
         ],
     ]
