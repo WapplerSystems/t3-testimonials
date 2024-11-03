@@ -13,33 +13,30 @@
 
     <div class="wstestimonials--{data.tx_wstestimonials_columns}">
         <f:for each="{items}" as="item">
-
-            <div class="">
-
-                <div class="wstestimonials--item">
-                    <div class="wstestimonials--item--image">
-                        <f:if condition="{item.authorImage.0}">
-                            <f:image image="{item.authorImage.0}" alt="{item.data.title}" width="150" height="150"/>
-                        </f:if>
-                    </div>
-                    <div class="wstestimonials--item--content">
-                        <div class="wstestimonials--item--title">
-                            {item.data.title}
-                        </div>
-                        <div class="wstestimonials--item--description">
-                            {item.data.content -> f:format.html()}
-                        </div>
-                        <div class="wstestimonials--item--description">
-                            {item.data.author_name}
-                        </div>
-                    </div>
+            <div class="wstestimonials__item">
+                <div class="wstestimonials__item__stars">
+                    <f:for each="{item.data.rating}" as="star">
+                        <span class="fa fa-star"></span>
+                    </f:for>
                 </div>
 
+                <div class="wstestimonials--item--image">
+                    <f:if condition="{item.authorImage.0}">
+                        <f:image image="{item.authorImage.0}" alt="{item.data.title}" width="150" height="150"/>
+                    </f:if>
+                </div>
+                <div class="wstestimonials--item--content">
+                    <div class="wstestimonials--item--title">
+                        {item.data.title}
+                    </div>
+                    <div class="wstestimonials--item--description">
+                        {item.data.content -> f:format.html()}
+                    </div>
+                    <div class="wstestimonials--item--description">
+                        {item.data.author_name}
+                    </div>
+                </div>
             </div>
-
-
-
-
         </f:for>
     </div>
 
