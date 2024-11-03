@@ -87,7 +87,6 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
             'type' => 'inline',
             'foreign_table' => 'tx_wstestimonials_domain_model_item',
             'foreign_field' => 'content_uid',
-            'foreign_label' => 'title',
             'foreign_sortby' => 'sorting',
             'maxitems' => '100',
             'appearance' => [

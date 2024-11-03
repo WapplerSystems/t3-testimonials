@@ -4,6 +4,7 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item',
         'label' => 'title',
+        'label_alt' => 'author_name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'sortby' => 'sorting',
@@ -136,7 +137,7 @@ return [
         ],
         'stars' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang_general.xlf:tx_wstestimonials_domain_model_item.stars',
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.stars',
             'config' => [
                 'type' => 'number',
                 'range' => [
