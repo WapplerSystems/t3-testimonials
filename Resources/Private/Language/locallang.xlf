@@ -18,6 +18,24 @@
 			<trans-unit id="items" xml:space="preserve">
 				<source>Elements</source>
 			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.columns" xml:space="preserve">
+				<source>Display in columns</source>
+			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.1" xml:space="preserve">
+				<source>1 column</source>
+			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.2" xml:space="preserve">
+				<source>2 columns</source>
+			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.author_name" xml:space="preserve">
+				<source>Author name</source>
+			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.author_image" xml:space="preserve">
+				<source>Author image</source>
+			</trans-unit>
+			<trans-unit id="tx_wstestimonials_domain_model_item.stars" xml:space="preserve">
+				<source>Stars</source>
+			</trans-unit>
 
 		</body>
 	</file>

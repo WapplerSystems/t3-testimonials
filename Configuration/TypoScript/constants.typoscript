@@ -1,0 +1,21 @@
+
+# customcategory=plugin.tx_wstestimonials=WS Slider
+
+plugin.tx_wstestimonials {
+
+    view {
+        # cat=plugin.tx_wstestimonials/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ws_testimonials/Resources/Private/Templates/
+        # cat=plugin.tx_wstestimonials/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ws_testimonials/Resources/Private/Partials/
+        # cat=plugin.tx_wstestimonials/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ws_testimonials/Resources/Private/Layouts/
+    }
+
+    settings {
+
+
+    }
+
+}
+

@@ -26,7 +26,7 @@ ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
-        'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.testimonials',
+        'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.ws_testimonials',
         'ws_testimonials',
         'content-ws_testimonials'
     ],
@@ -70,7 +70,9 @@ $GLOBALS['TCA']['tt_content']['palettes'] = array_replace_recursive(
         'ws_testimonials' => [
             'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:palette.wstestimonials',
             'showitem' => '
-                tx_wstestimonials_items;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items,
+                tx_wstestimonials_columns;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns,
+                --linebreak--,
+                tx_wstestimonials_items;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items
              ',
         ],
     ]
@@ -83,7 +85,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
         'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wsslider_domain_model_flexslider.items',
         'config' => [
             'type' => 'inline',
-            'foreign_table' => 'tx_wsslider_domain_model_item',
+            'foreign_table' => 'tx_wstestimonials_domain_model_item',
             'foreign_field' => 'content_uid',
             'foreign_label' => 'title',
             'foreign_sortby' => 'sorting',
@@ -102,26 +104,30 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
             'overrideChildTca' => [
                 'types' => [
                     '1' => [
-                        'showitem' => 'title, sys_language_uid, foreground_media, description, text_position, style_class, link, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
+                        'showitem' => 'title, content, author_name, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
                     ],
                 ]
             ]
         ]
     ],
+    'tx_wstestimonials_columns' => [
+        'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'size' => 1,
+            'items' => [
+                [
+                    'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns.options.1',
+                    'value' => 1,
+                ],
+                [
+                    'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns.options.2',
+                    'value' => 2,
+                ],
+            ],
+            'default' => 1,
+        ],
+    ],
 ]);
 
-
-$GLOBALS['TCA']['tt_content']['palettes'] = array_replace_recursive(
-    $GLOBALS['TCA']['tt_content']['palettes'], [
-        'tx_wsslider' => [
-            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:palette.wsslider',
-            'showitem' => '
-                tx_wsslider_preset;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:preset,--linebreak--,
-                tx_wsslider_renderer;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:renderer,
-                tx_wsslider_layout;LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.layout,
-                --linebreak--,
-                tx_wsslider_items;LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items,
-             ',
-        ],
-    ]
-);

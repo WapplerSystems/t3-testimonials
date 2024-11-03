@@ -17,9 +17,9 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,content,',
+        'searchFields' => 'title,content,author_name',
         'typeicon_classes' => [
-            'default' => 'ext-wstestimonials-image'
+            'default' => 'content-ws_testimonial'
         ],
         'security' => [
             'ignorePageTypeRestriction' => true,
@@ -29,7 +29,7 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'hidden, title, sys_language_uid, title, content, author_image, stars, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
+            'showitem' => 'hidden, title, content, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
         ],
     ],
     'palettes' => [
@@ -143,11 +143,15 @@ return [
                     'lower' => 0,
                     'upper' => 5
                 ],
+                'slider' => [
+                    'step' => 1,
+                    'width' => 300,
+                ],
             ],
         ],
         'author_image' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.foregroundMedia',
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.author_image',
             'config' => [
                 'type' => 'file',
                 'allowed' => 'common-image-types',
@@ -191,8 +195,15 @@ return [
                     ],
                 ],
             ],
-
-
+        ],
+        'author_name' => [
+            'exclude' => 0,
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.author_name',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+            ],
         ],
         'content_uid' => [
             'label' => 'CC',

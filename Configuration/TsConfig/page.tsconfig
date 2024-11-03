@@ -10,4 +10,5 @@ mod.wizards.newContentElement.wizardItems.common {
             }
         }
     }
+    show := addToList(ws_testimonials)
 }

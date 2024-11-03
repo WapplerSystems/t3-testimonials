@@ -1,0 +1,58 @@
+
+
+tt_content.ws_testimonials >
+tt_content.ws_testimonials =< lib.contentElement
+tt_content.ws_testimonials {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Testimonials
+
+    templateRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Templates/
+        10 = EXT:ws_testimonials/Resources/Private/Templates/
+        20 = {$plugin.tx_wstestimonials.view.templateRootPath}
+    }
+    partialRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Partials/
+        10 = EXT:ws_testimonials/Resources/Private/Partials/
+        20 = {$plugin.tx_wstestimonials.view.partialRootPath}
+    }
+    layoutRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+        10 = EXT:ws_testimonials/Resources/Private/Layouts/
+        20 = {$plugin.tx_wstestimonials.view.layoutRootPath}
+    }
+
+    settings {
+        slider < plugin.tx_wstestimonials.settings
+    }
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_wstestimonials_domain_model_item
+            as = items
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = content_uid=|
+            }
+            orderBy = sorting
+            dataProcessing {
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = author_image
+                    as = authorImage
+                }
+            }
+        }
+    }
+
+}
+
