@@ -124,6 +124,14 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
                     'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns.options.2',
                     'value' => 2,
                 ],
+                [
+                    'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns.options.3',
+                    'value' => 3,
+                ],
+                [
+                    'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.columns.options.4',
+                    'value' => 4,
+                ],
             ],
             'default' => 1,
         ],
