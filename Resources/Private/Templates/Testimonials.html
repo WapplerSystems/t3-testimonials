@@ -1,28 +1,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
       xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:wstest="http://typo3.org/ns/WapplerSystems/TestimonialsViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 
 
 <f:section name="Main">
 
-    <f:flashMessages queueIdentifier="core.template.flashMessages"/>
+    <f:asset.css identifier="wstestimonials" href="EXT:ws_testimonials/Resources/Public/CSS/styles.css" />
 
-
-
-
-    <div class="wstestimonials--{data.tx_wstestimonials_columns}">
+    <div class="wstestimonials wstestimonials--{data.tx_wstestimonials_columns}">
         <f:for each="{items}" as="item">
             <div class="wstestimonials__item">
-                <div class="wstestimonials__item__stars">
-                    <f:for each="{item.data.rating}" as="star">
-                        <span class="fa fa-star"></span>
-                    </f:for>
+                <div title="{item.data.stars}" class="wstestimonials__item__stars wstestimonials__item__stars--{item.data.stars -> f:replace(search:'.',replace:'-')}">
+                    <span class="wstestimonials__item__stars__one"></span>
+                    <span class="wstestimonials__item__stars__two"></span>
+                    <span class="wstestimonials__item__stars__three"></span>
+                    <span class="wstestimonials__item__stars__four"></span>
+                    <span class="wstestimonials__item__stars__five"></span>
                 </div>
 
                 <div class="wstestimonials--item--image">
                     <f:if condition="{item.authorImage.0}">
-                        <f:image image="{item.authorImage.0}" alt="{item.data.title}" width="150" height="150"/>
+                        <f:image image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
                     </f:if>
                 </div>
                 <div class="wstestimonials--item--content">

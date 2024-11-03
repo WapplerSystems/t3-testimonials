@@ -18,6 +18,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
+        'hideTable' => true,
         'searchFields' => 'title,content,author_name',
         'typeicon_classes' => [
             'default' => 'content-ws_testimonial'
@@ -140,12 +141,13 @@ return [
             'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.stars',
             'config' => [
                 'type' => 'number',
+                'format' => 'decimal',
                 'range' => [
                     'lower' => 0,
                     'upper' => 5
                 ],
                 'slider' => [
-                    'step' => 1,
+                    'step' => 0.5,
                     'width' => 300,
                 ],
             ],
