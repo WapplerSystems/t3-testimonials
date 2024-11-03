@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z" product-name="ws_testimonials">
+		<header/>
+		<body>
+			<trans-unit id="CType.ws_testimonial" xml:space="preserve">
+				<source>Testimonial</source>
+			</trans-unit>
+			<trans-unit id="CType.ws_testimonials" xml:space="preserve">
+				<source>Testimonials</source>
+			</trans-unit>
+			<trans-unit id="CType.ws_testimonials.description" xml:space="preserve">
+				<source>An element for one or more testimonials</source>
+			</trans-unit>
+			<trans-unit id="palette.wstestimonials" xml:space="preserve">
+				<source>Testimonials</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

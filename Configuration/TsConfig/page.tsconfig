@@ -1,0 +1,13 @@
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        ws_testimonials {
+            iconIdentifier = content-ws_testimonials
+            title = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.ws_testimonials
+            description = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.ws_testimonials.description
+            tt_content_defValues {
+                CType = ws_testimonials
+            }
+        }
+    }
+}
