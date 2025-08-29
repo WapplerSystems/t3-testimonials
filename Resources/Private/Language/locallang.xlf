@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z" product-name="ws_testimonials">
-		<header/>
-		<body>
-			<trans-unit id="CType.ws_testimonial" xml:space="preserve">
-				<source>Testimonial</source>
-			</trans-unit>
-			<trans-unit id="CType.ws_testimonials" xml:space="preserve">
-				<source>Testimonials</source>
-			</trans-unit>
-			<trans-unit id="CType.ws_testimonials.description" xml:space="preserve">
-				<source>An element for one or more testimonials</source>
-			</trans-unit>
-			<trans-unit id="palette.wstestimonials" xml:space="preserve">
-				<source>Testimonials</source>
-			</trans-unit>
-			<trans-unit id="items" xml:space="preserve">
-				<source>Elements</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.columns" xml:space="preserve">
-				<source>Display in columns</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.1" xml:space="preserve">
-				<source>1 column</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.2" xml:space="preserve">
-				<source>2 columns</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.3" xml:space="preserve">
-				<source>3 columns</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.columns.options.4" xml:space="preserve">
-				<source>4 columns</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.author_name" xml:space="preserve">
-				<source>Author name</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.author_image" xml:space="preserve">
-				<source>Author image</source>
-			</trans-unit>
-			<trans-unit id="tx_wstestimonials_domain_model_item.stars" xml:space="preserve">
-				<source>Stars</source>
-			</trans-unit>
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z"
+          product-name="ws_testimonials">
+        <header/>
+        <body>
+            <trans-unit id="CType.ws_testimonial">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="CType.ws_testimonials">
+                <source>Testimonials</source>
+            </trans-unit>
+            <trans-unit id="CType.ws_testimonials.description">
+                <source>An element for one or more testimonials</source>
+            </trans-unit>
+            <trans-unit id="palette.wstestimonials">
+                <source>Testimonials</source>
+            </trans-unit>
+            <trans-unit id="items">
+                <source>Elements</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.columns">
+                <source>Display in columns</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.1">
+                <source>1 column</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.2">
+                <source>2 columns</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.3">
+                <source>3 columns</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.4">
+                <source>4 columns</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_name">
+                <source>Author name</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_image">
+                <source>Author image</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.stars">
+                <source>Stars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.ws_testimonials.10">
+                <source>Alternating</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.ws_testimonials.20">
+                <source>Slider</source>
+            </trans-unit>
 
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>

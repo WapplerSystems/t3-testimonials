@@ -1,1 +1,21 @@
-@import 'EXT:ws_testimonials/Configuration/TsConfig/Page/page.tsconfig'
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        ws_testimonials {
+            iconIdentifier = content-ws_testimonials
+            title = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.ws_testimonials
+            description = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:CType.ws_testimonials.description
+            tt_content_defValues {
+                CType = ws_testimonials
+            }
+        }
+    }
+    show := addToList(ws_testimonials)
+}
+
+TCEFORM.tt_content.layout.types.ws_testimonials {
+    addItems {
+        10 = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tt_content.layout.types.ws_testimonials.10
+        20 = LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tt_content.layout.types.ws_testimonials.20
+    }
+}

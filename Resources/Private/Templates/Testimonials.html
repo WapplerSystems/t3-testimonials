@@ -9,30 +9,31 @@
 
     <f:asset.css identifier="wstestimonials" href="EXT:ws_testimonials/Resources/Public/CSS/styles.css" />
 
-    <div class="wstestimonials wstestimonials--{data.tx_wstestimonials_columns}">
+    <div class="wstestimonials wstestimonials--{data.tx_wstestimonials_columns} wstestimonials--layout-{data.layout}">
         <f:for each="{items}" as="item">
             <div class="wstestimonials__item">
-                <div title="{item.data.stars}" class="wstestimonials__item__stars wstestimonials__item__stars--{item.data.stars -> f:replace(search:'.',replace:'-')}">
-                    <span class="wstestimonials__item__stars__one"></span>
-                    <span class="wstestimonials__item__stars__two"></span>
-                    <span class="wstestimonials__item__stars__three"></span>
-                    <span class="wstestimonials__item__stars__four"></span>
-                    <span class="wstestimonials__item__stars__five"></span>
-                </div>
 
-                <div class="wstestimonials--item--image">
-                    <f:if condition="{item.authorImage.0}">
-                        <f:image image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
+
+                <f:if condition="{item.authorImage.0}">
+                    <f:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
+                </f:if>
+                <div class="wstestimonials__item__content">
+
+                    <f:if condition="{item.data.stars}">
+                        <div title="{item.data.stars}" class="wstestimonials__item__stars wstestimonials__item__stars--{item.data.stars -> f:replace(search:'.',replace:'-')}">
+                            <span class="wstestimonials__item__star"></span>
+                            <span class="wstestimonials__item__star"></span>
+                            <span class="wstestimonials__item__star"></span>
+                            <span class="wstestimonials__item__star"></span>
+                            <span class="wstestimonials__item__star"></span>
+                        </div>
                     </f:if>
-                </div>
-                <div class="wstestimonials--item--content">
-                    <div class="wstestimonials--item--title">
-                        {item.data.title}
-                    </div>
-                    <div class="wstestimonials--item--description">
+
+                    <div class="wstestimonials__item__title">{item.data.title}</div>
+                    <div class="wstestimonials__item__description">
                         {item.data.content -> f:format.html()}
                     </div>
-                    <div class="wstestimonials--item--description">
+                    <div class="wstestimonials__item__author">
                         {item.data.author_name}
                     </div>
                 </div>
