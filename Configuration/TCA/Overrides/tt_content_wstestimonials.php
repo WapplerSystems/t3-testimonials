@@ -46,6 +46,7 @@ $GLOBALS['TCA']['tt_content']['types']['ws_testimonials'] = array_replace_recurs
         'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                 --palette--;;general,
+                --palette--;;headers,
                 --palette--;;ws_testimonials,
             --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                 --palette--;;frames,
