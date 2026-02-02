@@ -139,3 +139,5 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
     ],
 ]);
 
+$GLOBALS['TCA']['tt_content']['types']['ws_testimonials']['previewRenderer'] =
+    \WapplerSystems\Testimonials\Preview\TestimonialPreviewRenderer::class;

@@ -11,12 +11,13 @@
 
     <div class="wstestimonials wstestimonials--{data.tx_wstestimonials_columns} wstestimonials--layout-{data.layout}">
         <f:for each="{items}" as="item">
-            <div class="wstestimonials__item">
+            <figure class="wstestimonials__item">
 
-
-                <f:if condition="{item.authorImage.0}">
-                    <f:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
-                </f:if>
+                <figcaption>
+                    <f:if condition="{item.authorImage.0}">
+                        <f:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
+                    </f:if>
+                </figcaption>
                 <div class="wstestimonials__item__content">
 
                     <f:if condition="{item.data.stars}">
@@ -30,14 +31,14 @@
                     </f:if>
 
                     <div class="wstestimonials__item__title">{item.data.title}</div>
-                    <div class="wstestimonials__item__description">
+                    <blockquote class="wstestimonials__item__quote">
                         {item.data.content -> f:format.html()}
-                    </div>
+                    </blockquote>
                     <div class="wstestimonials__item__author">
                         {item.data.author_name}
                     </div>
                 </div>
-            </div>
+            </figure>
         </f:for>
     </div>
 
