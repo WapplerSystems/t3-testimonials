@@ -9,10 +9,6 @@ CREATE TABLE tx_wstestimonials_domain_model_item
 
     content_uid  int(11) unsigned DEFAULT '0' NOT NULL,
 
-    author_image int(11) unsigned DEFAULT '0',
-    author_name  varchar(255)     DEFAULT ''  NOT NULL,
-    title        text,
-    content      text,
     stars        float            DEFAULT '0' NOT NULL
 
 );
