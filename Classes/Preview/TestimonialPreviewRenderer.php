@@ -16,9 +16,10 @@ class TestimonialPreviewRenderer implements PreviewRendererInterface
 
     public function renderPageModulePreviewContent(GridColumnItem $item): string
     {
-        $row = $item->getRecord();
+        $record = $item->getRecord();
+        $uid = is_array($record) ? ($record['uid'] ?? 0) : $record->getUid();
         $output = '<ul style="margin:0; padding-left:20px;">';
-        $testimonials = $this->getTestimonials($row['uid'] ?? 0);
+        $testimonials = $this->getTestimonials($uid);
         foreach ($testimonials as $testimonial) {
             $title = htmlspecialchars($testimonial['title'] ?? '');
             $content = htmlspecialchars(strip_tags($testimonial['content'] ?? ''));
