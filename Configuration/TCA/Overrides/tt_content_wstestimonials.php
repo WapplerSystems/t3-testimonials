@@ -83,7 +83,7 @@ $GLOBALS['TCA']['tt_content']['palettes'] = array_replace_recursive(
 ExtensionManagementUtility::addTCAcolumns('tt_content', [
     'tx_wstestimonials_items' => [
         'exclude' => 0,
-        'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wsslider_domain_model_flexslider.items',
+        'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:items',
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_wstestimonials_domain_model_item',

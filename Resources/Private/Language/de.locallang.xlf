@@ -13,16 +13,20 @@
                 <target>Referenzen</target>
             </trans-unit>
             <trans-unit id="CType.ws_testimonials.description">
-                <source>An element for one or more testimonials</source>
-                <target>Ein Element für eine oder mehrere Referenzen</target>
+                <source>Customer reviews and testimonials with star ratings and author information</source>
+                <target>Kundenbewertungen und Referenzen mit Sternebewertung und Autoreninformationen</target>
             </trans-unit>
             <trans-unit id="palette.wstestimonials">
                 <source>Testimonials</source>
                 <target>Referenzen</target>
             </trans-unit>
             <trans-unit id="items">
-                <source>Elements</source>
-                <target>Elemente</target>
+                <source>Testimonial entries</source>
+                <target>Referenz-Einträge</target>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.content_uid">
+                <source>Content element</source>
+                <target>Inhaltselement</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.columns">
                 <source>Display in columns</source>
@@ -53,8 +57,8 @@
                 <target>Autorenbild</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.stars">
-                <source>Stars</source>
-                <target>Sterne</target>
+                <source>Star rating</source>
+                <target>Sternebewertung</target>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.ws_testimonials.10">
                 <source>Alternating</source>

@@ -209,7 +209,7 @@ return [
             ],
         ],
         'content_uid' => [
-            'label' => 'CC',
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.content_uid',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',

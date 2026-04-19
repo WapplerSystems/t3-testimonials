@@ -2,16 +2,16 @@
 
 $EM_CONF['ws_testimonials'] = [
     'title' => 'Testimonial content elements',
-    'description' => '',
+    'description' => 'Customer testimonials and reviews with star ratings, author images and flexible layouts (alternating, slider, columns).',
     'category' => 'plugin',
     'author' => 'Sven Wappler',
     'author_email' => 'typo3@wappler.systems',
-    'state' => 'alpha',
+    'state' => 'stable',
     'clearCacheOnLoad' => 0,
-    'version' => '13.0.0',
+    'version' => '14.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '13.4.0-13.4.99',
+            'typo3' => '14.0.0-14.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],
