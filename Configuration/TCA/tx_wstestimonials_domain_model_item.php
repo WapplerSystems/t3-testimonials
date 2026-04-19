@@ -3,6 +3,7 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item',
+        'descriptionColumn' => 'content',
         'label' => 'title',
         'label_alt' => 'author_name',
         'tstamp' => 'tstamp',
@@ -31,7 +32,7 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'hidden, title, content, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
+            'showitem' => 'hidden, title, content, author_name, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
         ],
     ],
     'palettes' => [
@@ -117,7 +118,7 @@ return [
         ],
         'title' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header',
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.title',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -128,7 +129,7 @@ return [
             'l10n_mode' => 'prefixLangTitle',
             'l10n_cat' => 'text',
             'exclude' => 0,
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.text',
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.content',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,

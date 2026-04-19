@@ -19,11 +19,20 @@
             <trans-unit id="items">
                 <source>Testimonial entries</source>
             </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.title">
+                <source>Quote headline</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.content">
+                <source>Quote text</source>
+            </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.content_uid">
                 <source>Content element</source>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.columns">
-                <source>Display in columns</source>
+                <source>Number of columns</source>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.1">
                 <source>1 column</source>
@@ -38,19 +47,19 @@
                 <source>4 columns</source>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_name">
-                <source>Author name</source>
+                <source>Author / Source</source>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_image">
-                <source>Author image</source>
+                <source>Author photo</source>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.stars">
-                <source>Star rating</source>
+                <source>Star rating (0–5)</source>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.ws_testimonials.10">
-                <source>Alternating</source>
+                <source>Alternating (left/right)</source>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.ws_testimonials.20">
-                <source>Slider</source>
+                <source>Slider (carousel)</source>
             </trans-unit>
 
         </body>

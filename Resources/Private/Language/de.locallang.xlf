@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z"
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-06-02T11:47:10Z"
           product-name="ws_testimonials">
         <header/>
         <body>
             <trans-unit id="CType.ws_testimonial">
                 <source>Testimonial</source>
-                <target>Referenz</target>
+                <target>Kundenstimme</target>
             </trans-unit>
             <trans-unit id="CType.ws_testimonials">
                 <source>Testimonials</source>
-                <target>Referenzen</target>
+                <target>Kundenstimmen</target>
             </trans-unit>
             <trans-unit id="CType.ws_testimonials.description">
                 <source>Customer reviews and testimonials with star ratings and author information</source>
@@ -18,19 +18,31 @@
             </trans-unit>
             <trans-unit id="palette.wstestimonials">
                 <source>Testimonials</source>
-                <target>Referenzen</target>
+                <target>Kundenstimmen</target>
             </trans-unit>
             <trans-unit id="items">
                 <source>Testimonial entries</source>
-                <target>Referenz-Einträge</target>
+                <target>Kundenstimmen-Einträge</target>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item">
+                <source>Testimonial</source>
+                <target>Kundenstimme</target>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.title">
+                <source>Quote headline</source>
+                <target>Zitat-Überschrift</target>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.content">
+                <source>Quote text</source>
+                <target>Zitat-Text</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.content_uid">
                 <source>Content element</source>
                 <target>Inhaltselement</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.columns">
-                <source>Display in columns</source>
-                <target>In Spalten anzeigen</target>
+                <source>Number of columns</source>
+                <target>Anzahl der Spalten</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.columns.options.1">
                 <source>1 column</source>
@@ -49,24 +61,24 @@
                 <target>4 Spalten</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_name">
-                <source>Author name</source>
-                <target>Autorenname</target>
+                <source>Author / Source</source>
+                <target>Autor / Quelle</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_image">
-                <source>Author image</source>
-                <target>Autorenbild</target>
+                <source>Author photo</source>
+                <target>Autorenfoto</target>
             </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.stars">
-                <source>Star rating</source>
-                <target>Sternebewertung</target>
+                <source>Star rating (0–5)</source>
+                <target>Sternebewertung (0–5)</target>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.ws_testimonials.10">
-                <source>Alternating</source>
-                <target>Alternierend</target>
+                <source>Alternating (left/right)</source>
+                <target>Alternierend (links/rechts)</target>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.ws_testimonials.20">
-                <source>Slider</source>
-                <target>Slider</target>
+                <source>Slider (carousel)</source>
+                <target>Slider (Karussell)</target>
             </trans-unit>
 
         </body>

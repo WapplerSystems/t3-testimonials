@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF['ws_testimonials'] = [
-    'title' => 'Testimonial content elements',
+    'title' => 'Testimonials / Customer Reviews',
     'description' => 'Customer testimonials and reviews with star ratings, author images and flexible layouts (alternating, slider, columns).',
     'category' => 'plugin',
     'author' => 'Sven Wappler',
