@@ -13,9 +13,12 @@
         <f:for each="{items}" as="item">
             <figure class="wstestimonials__item">
 
-                <figcaption>
+                <figcaption style="align-self:flex-start;flex-shrink:0;">
                     <f:if condition="{item.authorImage.0}">
                         <f:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
+                    </f:if>
+                    <f:if condition="{settings.quoteIcon}">
+                        <img src="{settings.quoteIcon}" alt="" class="wstestimonials__item__quote-icon" style="width:2rem;height:2rem;" aria-hidden="true" />
                     </f:if>
                 </figcaption>
                 <div class="wstestimonials__item__content">
