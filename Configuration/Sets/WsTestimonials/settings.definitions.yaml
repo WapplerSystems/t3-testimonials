@@ -1,6 +1,0 @@
-settings:
-  tx_wstestimonials.quoteIcon:
-    label: 'Testimonials: Pfad zum Quote-Icon'
-    description: 'Pfad zum Icon das links bei jedem Testimonial erscheint. Leer lassen = kein Icon.'
-    type: string
-    default: ''

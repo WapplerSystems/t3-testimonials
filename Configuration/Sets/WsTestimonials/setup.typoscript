@@ -27,7 +27,6 @@ tt_content.ws_testimonials {
 
     settings {
         slider < plugin.tx_wstestimonials.settings
-        quoteIcon = {$tx_wstestimonials.quoteIcon}
     }
 
     ##########################

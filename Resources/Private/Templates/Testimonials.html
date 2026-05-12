@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
       xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
-      xmlns:wstest="http://typo3.org/ns/WapplerSystems/TestimonialsViewHelpers"
+      xmlns:wstest="http://typo3.org/ns/WapplerSystems/Testimonials/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 
@@ -15,10 +15,10 @@
 
                 <figcaption style="align-self:flex-start;flex-shrink:0;">
                     <f:if condition="{item.authorImage.0}">
-                        <f:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
+                        <wstest:image class="wstestimonials__item__image" image="{item.authorImage.0}" alt="{item.data.author_name}" width="150" height="150"/>
                     </f:if>
                     <f:if condition="{settings.quoteIcon}">
-                        <img src="{settings.quoteIcon}" alt="" class="wstestimonials__item__quote-icon" style="width:2rem;height:2rem;" aria-hidden="true" />
+                        <img src="{settings.quoteIcon}" alt="" class="wstestimonials__item__quote-icon" aria-hidden="true" />
                     </f:if>
                 </figcaption>
                 <div class="wstestimonials__item__content">
