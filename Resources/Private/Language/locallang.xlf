@@ -49,6 +49,12 @@
             <trans-unit id="tx_wstestimonials_domain_model_item.author_name">
                 <source>Author / Source</source>
             </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_position">
+                <source>Author position / role</source>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_company">
+                <source>Author company</source>
+            </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_image">
                 <source>Author photo</source>
             </trans-unit>

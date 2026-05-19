@@ -20,7 +20,7 @@ return [
             'endtime' => 'endtime',
         ],
         'hideTable' => true,
-        'searchFields' => 'title,content,author_name',
+        'searchFields' => 'title,content,author_name,author_position,author_company',
         'typeicon_classes' => [
             'default' => 'content-ws_testimonial'
         ],
@@ -32,7 +32,7 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'hidden, title, content, author_name, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
+            'showitem' => 'hidden, title, content, author_name, author_position, author_company, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
         ],
     ],
     'palettes' => [
@@ -203,6 +203,24 @@ return [
         'author_name' => [
             'exclude' => 0,
             'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.author_name',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+            ],
+        ],
+        'author_position' => [
+            'exclude' => 0,
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.author_position',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+            ],
+        ],
+        'author_company' => [
+            'exclude' => 0,
+            'label' => 'LLL:EXT:ws_testimonials/Resources/Private/Language/locallang.xlf:tx_wstestimonials_domain_model_item.author_company',
             'config' => [
                 'type' => 'input',
                 'size' => 30,

@@ -37,6 +37,11 @@
                     <div class="wstestimonials__item__author">
                         {item.data.author_name}
                     </div>
+                    <f:if condition="{item.data.author_position} || {item.data.author_company}">
+                        <div class="wstestimonials__item__meta">
+                            <f:if condition="{item.data.author_position}">{item.data.author_position}</f:if><f:if condition="{item.data.author_position} && {item.data.author_company}">, </f:if><f:if condition="{item.data.author_company}">{item.data.author_company}</f:if>
+                        </div>
+                    </f:if>
                 </div>
             </figure>
         </f:for>

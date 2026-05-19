@@ -64,6 +64,14 @@
                 <source>Author / Source</source>
                 <target>Autor / Quelle</target>
             </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_position">
+                <source>Author position / role</source>
+                <target>Position / Funktion</target>
+            </trans-unit>
+            <trans-unit id="tx_wstestimonials_domain_model_item.author_company">
+                <source>Author company</source>
+                <target>Firma</target>
+            </trans-unit>
             <trans-unit id="tx_wstestimonials_domain_model_item.author_image">
                 <source>Author photo</source>
                 <target>Autorenfoto</target>

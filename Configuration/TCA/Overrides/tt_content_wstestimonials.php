@@ -104,7 +104,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
             'overrideChildTca' => [
                 'types' => [
                     '1' => [
-                        'showitem' => 'title, content, author_name, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
+                        'showitem' => 'title, content, author_name, author_position, author_company, author_image, stars, sys_language_uid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
                     ],
                 ]
             ]
