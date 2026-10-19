@@ -64,7 +64,7 @@
 
 .wstestimonials__item__stars > span {
     display: block;
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-empty.svg");
+    background-image: url("../Icons/star-empty.svg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 1.3rem;
@@ -74,55 +74,55 @@
 }
 
 .wstestimonials__item__stars--1 > span:nth-child(1) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--1-5 > span:nth-child(1), .wstestimonials__item__stars--1-5 > span:nth-child(2) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--1-5 > span:nth-child(3) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-half-full.svg");
+    background-image: url("../Icons/star-half-full.svg");
 }
 
 .wstestimonials__item__stars--2 > span:nth-child(1), .wstestimonials__item__stars--2 > span:nth-child(2) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--2-5 > span:nth-child(1), .wstestimonials__item__stars--2-5 > span:nth-child(2) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--2-5 > span:nth-child(3) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-half-full.svg");
+    background-image: url("../Icons/star-half-full.svg");
 }
 
 .wstestimonials__item__stars--3 > span:nth-child(1), .wstestimonials__item__stars--3 > span:nth-child(2), .wstestimonials__item__stars--3 > span:nth-child(3) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--3-5 > span:nth-child(1), .wstestimonials__item__stars--3-5 > span:nth-child(2), .wstestimonials__item__stars--3-5 > span:nth-child(3) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--3-5 > span:nth-child(4) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-half-full.svg");
+    background-image: url("../Icons/star-half-full.svg");
 }
 
 .wstestimonials__item__stars--4 > span:nth-child(1), .wstestimonials__item__stars--4 > span:nth-child(2), .wstestimonials__item__stars--4 > span:nth-child(3), .wstestimonials__item__stars--4 > span:nth-child(4) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--4-5 > span:nth-child(1), .wstestimonials__item__stars--4-5 > span:nth-child(2), .wstestimonials__item__stars--4-5 > span:nth-child(3), .wstestimonials__item__stars--4-5 > span:nth-child(4) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 .wstestimonials__item__stars--4-5 > span:nth-child(5) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-half-full.svg");
+    background-image: url("../Icons/star-half-full.svg");
 }
 
 .wstestimonials__item__stars--5 > span:nth-child(1), .wstestimonials__item__stars--5 > span:nth-child(2), .wstestimonials__item__stars--5 > span:nth-child(3), .wstestimonials__item__stars--5 > span:nth-child(4), .wstestimonials__item__stars--5 > span:nth-child(5) {
-    background-image: url("/_assets/8bd22cf6a7e5df065eb3f093303b1d7f/Icons/star-full.svg");
+    background-image: url("../Icons/star-full.svg");
 }
 
 
