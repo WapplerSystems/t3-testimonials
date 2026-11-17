@@ -1,8 +1,9 @@
 <?php
+
+declare(strict_types=1);
+
 namespace WapplerSystems\Testimonials\ViewHelpers;
 
-
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -10,106 +11,61 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  */
 class LoopViewHelper extends AbstractViewHelper
 {
-
     protected $escapeChildren = false;
 
-    /**
-     * @var boolean
-     */
     protected $escapeOutput = false;
-
 
     public function initializeArguments(): void
     {
         $this->registerArgument('iteration', 'string', 'Variable name to insert result into, suppresses output');
         $this->registerArgument('count', 'integer', 'Number of times to render child content', true);
         $this->registerArgument('minimum', 'integer', 'Minimum number of loops before stopping', false, 0);
-        $this->registerArgument('maximum', 'integer', 'Maxiumum number of loops before stopping', false, PHP_INT_MAX);
+        $this->registerArgument('maximum', 'integer', 'Maximum number of loops before stopping', false, PHP_INT_MAX);
     }
 
+    public function render(): string
+    {
+        $count = max((int)$this->arguments['minimum'], min((int)$this->arguments['count'], (int)$this->arguments['maximum']));
+        $iteration = $this->arguments['iteration'];
+        $variableProvider = $this->renderingContext->getVariableProvider();
 
-    /**
-     * @return string
-     */
-    protected static function renderIteration(
-        int $i,
-        int $from,
-        int $to,
-        int $step,
-        ?string $iterationArgument,
-        RenderingContextInterface $renderingContext,
-        \Closure $renderChildrenClosure
-    ) {
-        if (!empty($iterationArgument)) {
-            $variableProvider = $renderingContext->getVariableProvider();
-            $cycle = (integer) (($i - $from) / $step) + 1;
-            $iteration = [
-                'index' => $i,
-                'cycle' => $cycle,
-                'isOdd' => 0 === $cycle % 2,
-                'isEven' => 0 === $cycle % 2,
-                'isFirst' => $i === $from,
-                'isLast' => static::isLast($i, $from, $to, $step)
-            ];
-            $variableProvider->add($iterationArgument, $iteration);
-            $content = $renderChildrenClosure();
-            $variableProvider->remove($iterationArgument);
-        } else {
-            $content = $renderChildrenClosure();
-        }
-
-        return $content;
-    }
-
-
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
-        /** @var int $count */
-        $count = $arguments['count'];
-        /** @var int $minimum */
-        $minimum = $arguments['minimum'];
-        /** @var int $maximum */
-        $maximum = $arguments['maximum'];
-        /** @var string|null $iteration */
-        $iteration = $arguments['iteration'];
-        $content = '';
-        $variableProvider = $renderingContext->getVariableProvider();
-
-        if ($count < $minimum) {
-            $count = $minimum;
-        } elseif ($count > $maximum) {
-            $count = $maximum;
-        }
-
-        if ($iteration !== null && $variableProvider->exists($iteration)) {
-            $backupVariable = $variableProvider->get($iteration);
+        $hasBackup = $iteration !== null && $variableProvider->exists($iteration);
+        $backupVariable = $hasBackup ? $variableProvider->get($iteration) : null;
+        if ($hasBackup) {
             $variableProvider->remove($iteration);
         }
 
+        $content = '';
         for ($i = 0; $i < $count; $i++) {
-            $content .= static::renderIteration(
-                $i,
-                0,
-                $count,
-                1,
-                $iteration,
-                $renderingContext,
-                $renderChildrenClosure
-            );
+            $content .= $this->renderIteration($i, $count, $iteration);
         }
 
-        if ($iteration !== null && isset($backupVariable)) {
+        if ($hasBackup) {
             $variableProvider->add($iteration, $backupVariable);
         }
 
         return $content;
     }
 
-    protected static function isLast(int $i, int $from, int $to, int $step): bool
+    protected function renderIteration(int $i, int $count, ?string $iterationArgument): string
     {
-        return ($i + $step >= $to);
+        if (empty($iterationArgument)) {
+            return (string)$this->renderChildren();
+        }
+
+        $variableProvider = $this->renderingContext->getVariableProvider();
+        $cycle = $i + 1;
+        $variableProvider->add($iterationArgument, [
+            'index' => $i,
+            'cycle' => $cycle,
+            'isOdd' => $cycle % 2 === 1,
+            'isEven' => $cycle % 2 === 0,
+            'isFirst' => $i === 0,
+            'isLast' => $i + 1 >= $count,
+        ]);
+        $content = (string)$this->renderChildren();
+        $variableProvider->remove($iterationArgument);
+
+        return $content;
     }
 }
